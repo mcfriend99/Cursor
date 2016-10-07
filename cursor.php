@@ -244,7 +244,7 @@ class Cursor{
 		### Comment our the following lines to implment a trash system.
 		// Trashing before removing row
 		// $sqr = $this->select($table, null, $where);
-		// $this->insert("trash",@json_encode($sqr));
+		// $this->insert("trash", ["content" => @json_encode($sqr)]);
 		
 		// Removing row.
 		$sql = $this->con->prepare("DELETE FROM `{$table}` WHERE {$_cols}");
